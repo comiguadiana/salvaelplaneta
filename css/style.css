@@ -3,12 +3,14 @@ body {
     padding: 0;
     overflow: hidden;
     font-family: Arial, sans-serif;
+    background-image: url('../img/fondo.jpg');
+
   }
   
   .game-container {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-image: url('../img/fondo.jpg');
     background-size: cover;
     background-position: center;
@@ -41,10 +43,10 @@ body {
   button {
     width: 60px;
     height: 60px;
-    font-size: 24px;
+    font-size:40px;
     border: none;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background-color:#ff6b6b;
     color: white;
     cursor: pointer;
   }
