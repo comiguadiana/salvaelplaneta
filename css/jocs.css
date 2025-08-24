@@ -1,0 +1,125 @@
+/* Estilos para juegos.html */
+.juegos-page {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('../img/fondo.jpg');
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .juegos-page header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+  }
+  
+  .juegos-page header h1 {
+    color: #ff6b6b;
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  .juegos-page header p {
+    color: #666;
+    font-size: 1.2rem;
+  }
+  
+  /* Contenedor de los juegos */
+  .games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Tarjeta de cada juego */
+  .game-card {
+    text-decoration: none;
+    color: inherit;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: block;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .game-card h3 {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+    color: #ff6b6b;
+    font-weight: 600;
+  }
+  
+  /* Footer */
+  .juegos-page footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 2rem;
+    color: #666;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .games-container {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .juegos-page header h1 {
+      font-size: 2rem;
+    }
+  }
+  
+
+
+  /* Footer */
+.juegos-page footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 2rem;
+    color: #666;
+  }
+  
+  /* Enlace a Instagram */
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-links a {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #e74c3c;
+  }
+  
+  .social-links i {
+    font-size: 1.2rem;
+  }
+  

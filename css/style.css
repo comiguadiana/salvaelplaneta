@@ -31,6 +31,13 @@ body {
     color: white;
     font-size: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    background-color: rgb(255, 107, 107, 0.5); /* Rojo con 50% de transparencia */
+
+  
+
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
   }
   
   .controls {
@@ -40,7 +47,7 @@ body {
     gap: 20px;
   }
   
-  button {
+  .controls button {
     width: 60px;
     height: 60px;
     font-size:40px;
@@ -55,3 +62,159 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
   }
   
+
+
+
+
+/* Botón del ranking */
+#ranking-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+/* Popup del ranking */
+#ranking-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1001;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+#close-popup {
+  float: right;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: -100px;
+}
+
+#ranking-list {
+  list-style: none;
+  padding: 0;
+}
+
+#ranking-list li {
+  padding: 8px;
+  margin: 5px 0;
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.won-prize {
+  max-width: 80vw;
+  max-height: 50vh;
+}
+
+.control-btn2 {
+  padding: 15px;
+  font-size: 20px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+}
+
+.control-btn:active {
+  background-color: #ff5252;
+}
+
+#restartBtn{
+  width: 100%;
+}
+
+
+/* Contenedor del input */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del label */
+.input-container label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Estilo del input */
+#player-name {
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
+#player-name:focus {
+  border-color: #4CAF50; /* Verde, como tu botón */
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+/* Estilo del botón */
+#submit-score {
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+#submit-score:hover {
+  background: #45a049;
+}

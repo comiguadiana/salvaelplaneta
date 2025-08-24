@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7H3SNLBZ5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7H3SNLBZ5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-Q7H3SNLBZ5');
-</script>
+    gtag('config', 'G-Q7H3SNLBZ5');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Salva els planetes intergalàctics</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="js/firebase-config.js" defer></script>
 </head>
+
 <body>
   <div class="game-container">
     <canvas id="gameCanvas"></canvas>
+    <!-- Botón para abrir el popup -->
+    <button id="ranking-button">🏆 Ranking</button>
+
+    <!-- Popup del ranking -->
+    <div id="ranking-popup">
+      <h2>Ranking Global</h2>
+      <button id="close-popup">✕</button>
+      <ol id="ranking-list"></ol>
+    </div>
+
     <div class="score-container">
-      <p>Vides: <span id="lives">3</span></p>
-      <p>Planetes salvats: <span id="score">0</span></p>
+      Vides: <span id="lives">3</span><br/>
+      Planetes salvats: <span id="score">0</span>
     </div>
     <div class="controls">
       <button id="leftBtn">←</button>
       <button id="rightBtn">→</button>
     </div>
   </div>
+  <div class="modal" id="winModal">
+    <div class="modal-content">
+        <h2>Enhorabona!</h2>
+        <h3> Has salvat : <span id="puntuacion"></span> planetes</h3>
+        <h4>Col·labora amb la <a href='https://www.instagram.com/comiguadiana/'>@comiguadiana</a></h4>
+        <div class="input-container">
+          <label for="player-name">Tu nombre:</label>
+          <input type="text" id="player-name" placeholder="Nom...">
+          <button id="submit-score">Guardar Puntuación</button>
+        </div>
+        <button id="restartBtn" class="control-btn2">Sortir</button>
+        <p><a href="jocs.html">Mira els altres jocs de la comiguadiana</a></p>
+    </div>
+</div>
   <script src="js/script.js"></script>
 </body>
+
 </html>
